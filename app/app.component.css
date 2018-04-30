@@ -1,0 +1,42 @@
+.search
+{
+    text-align: center;
+    margin-top:50px;
+}
+.search1
+{
+    height:30px;
+    width:40%;
+    margin-top: 20px;
+}
+.button{
+    height:30px;
+    width: 80px;
+    margin-top: 20px;
+}
+.Altrepo
+{    margin-top: 10px;
+    text-align: center;  
+}
+#avtar{
+    width: 50%;
+    height: 102%;
+}
+.Altprofile{
+    margin-top: 20px;
+    margin-left: 140px;
+}
+#foot{
+    text-align: center;
+    margin-left: 24px;
+    width: 90%;
+    padding: 30px;
+}
+.Form{
+    text-align: center;
+    padding: 10px;
+}
+#align{
+    text-align: center;
+    padding: 10px;
+}

@@ -1,0 +1,87 @@
+
+<nav-select></nav-select>
+<div class="search">
+  <input [(ngModel)]="username" placeholder="enter username" class="search1">
+  <button (click)="load_userdata()" class="button">ViewProfile</button>
+  <button (click)="load_userdata_repos()" class="button">ViewRepo</button>
+</div>
+
+<div class="row">
+  
+       <div *ngIf="userdata1" class="Altprofile span6">
+           <h2>{{userdata1.name}}</h2> 
+         <img src="{{userdata1.avatar_url}}" class="pic pull-left" id="avtar" >
+       </div> 
+
+    
+             <div *ngIf="userdata1" class="Altprofile span6">
+        <div *ngFor="let user of userdata1; let i=index">
+                <h6> {{user.id}} : {{user.userName}} : {{user.repoName}}</h6>
+        </div>
+        
+      </div>
+
+      
+    <div *ngIf="userdata" class="Altrepo span6 ">
+        <h2>Welcome to {{userdata1.name}} Repo. </h2>
+      <div  *ngFor= "let repo of userdata; let i=index;">
+          {{userdata[i].name}} : <a href="{{userdata[i].clone_url}}">Detail..</a>
+      </div>
+    </div>
+    
+
+</div>
+<h1 id="align">Build on GitHub<h1><h3 id="align"> Customize your process with GitHub apps and an intuitive API. Integrate
+  the tools you already use or <br>discover new favorites to create a happier,
+  more efficient way of working.</h3>
+  <img src="assets/foot3.png" class="img-fluid" id="foot">
+  <nav>
+      <a class="btn btn-primary" routerLink="integration" > Integration</a>
+      <a class="btn btn-primary" routerLink="business"  > Business</a>
+      <a class="btn btn-primary" routerLink="team"  > Sign up your team</a>
+  </nav>
+
+<router-outlet></router-outlet>
+
+<h2 id="align">Thank You Users...<h2><h3 id="align">Today more than a million using Repo.</h3>
+<img src="assets/foot2.jpg" class="img-fluid" id="foot">
+   
+
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-2">
+                 <h4> copyrights &copy; 2017</h4>
+            </div><!--end of col2-->
+
+            <div class="col-sm-2">
+                <h4> Features</h4>
+                <h5>Code reviews<br><br>Project management <br><br> Community <br><br> Documantation </h5>
+           </div><!--end of col4-->
+    
+           <div class="col-sm-2">
+              <h4>Platform</h4>
+              <h5>Atom<br><br>Electron <br><br>GitHub Desktop<br><br> Developers </h5>
+           </div><!--end of col2-->
+           
+           <div class="col-sm-2">
+              <h4>Community</h4>
+              <h5>Personal<br><br>Open source <br><br>For Business<br><br>Sponsorships</h5>
+            </div><!--end of col2-->
+           
+           <div class="col-sm-2">
+              <h4>Company</h4>
+              <h5>About<br><br>Blog <br><br>Careers<br><br>Press</h5>
+           </div>    
+           
+            <div class="col-sm-2">
+                <h4>Resources</h4>
+                <h5>Help<br><br>Status <br><br>Terms<br><br>Privacy</h5>
+            </div><!--end of col4-->
+
+    </div><!--end of footer row-->
+        
+</div><!--end of container-->       
+</footer>
+
+
